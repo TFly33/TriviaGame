@@ -1,0 +1,105 @@
+<!-- 1. Your game should all be contained on one page, not multiple pages.
+2. Whichever one you choose to do, you will want to look into the ".hide()" and ".show()" jQuery methods. This will allow you to hide certain HTML elements based on what part of the game the user is doing (when the user clicks "Start Game," you want to hide the "Start Game" button and show the questions. When the user clicks "Done," you'll want to hide the trivia questions and show the results, etc). https://www.w3schools.com/jquery/eff_hide.asp
+3. If you choose to do the more challenging assignment, you'll need to structure your questions, answers, and correct answer as an array of objects, so you can reference them with your counter variable. Look at Unit 3, Activity 34 - Question Game for an example of an array of objects.
+4. You'll need variables to track correct answers, incorrect answers, and unanswered answers. If you are doing the challenging assignment, you may need a "counter" to track which question the user will be doing next after they answer each question.
+5. If you choose to do the "basic" assignment, you can choose to either list out your questions as a part of your HTML document, or you can use a for loop with an array of objects to display your questions on the page. Either way, look into the "radio button" resources posted above for assistance on listing your questions.
+6. The Unit 5 Stop Watch activity and Slide Show activity will help with setting up your timer. Remember it will be counting down, not up!
+7. Post in ask-the-class if you're at home and feeling like you don't know how to proceed with your code! (edited)  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container card-body border">
+        <div>
+            How many square are on a chess board?
+            <br>
+            <label class="radio-inline"><input type="radio" name="optradio" checked> 50 </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> 64 </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> 49 </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> 81 </label>
+        </div>
+    </div>
+    <div class="container card-body border">
+        <div>
+           Which combination describes how pawns move?
+            <br>
+            <label class="radio-inline"><input type="radio" name="optradio" checked> Initially, pawns can move one or two squares, and can capture opposing pieces diagonally </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Initially, pawns can only move one square, and can capture opposing pieces diagonally </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Initially, pawns must move two squares, and capture diagonally </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Initially, pawns can move one or two squares, and can capture vertically and horizontally </label>
+        </div>
+    </div>
+    <div class="container card-body border">
+        <div>
+            Who is the only American to hold the title of World Chess Champion?
+            <br>
+            <label class="radio-inline"><input type="radio" name="optradio" checked> Anatoly Karpov </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Garry Kasparov </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Paul Morphy </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Bobby Fischer </label>
+        </div>
+    </div>
+    <div class="container card-body border">
+        <div>
+            In terms of movement, the queen is combination of which two pieces?
+            <br>
+            <label class="radio-inline"><input type="radio" name="optradio" checked> knight, rook </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> rook, bishop </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> bishop, knight </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> rook, king </label>
+        </div>
+    </div>
+    <div class="container card-body border">
+        <div>
+            Widely considered the greatest chess player of all time, this player is known as "The beast from Baku"?
+            <br>
+            <label class="radio-inline"><input type="radio" name="optradio" checked> Garry Kasparov </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Anatoly Karpov </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Mikhail Tal </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Paul Morphy </label>
+        </div>
+    </div>
+    <div class="container card-body border">
+        <div>
+            Historians generally agree that chess originated in?
+            <br>
+            <label class="radio-inline"><input type="radio" name="optradio" checked> Eastern Russia </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> England </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Ethiopia </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> India, before spreading to Persia </label>
+        </div>
+    </div>
+    <div class="container card-body border">
+        <div>
+            In chess half the square are light and half are dark. Which piece can never change from light to dark or dark to light?
+            <br>
+            <label class="radio-inline"><input type="radio" name="optradio" checked> Queen </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Pawn </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Bishop </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Rook </label>
+        </div>
+    </div>
+    <div class="container card-body border">
+        <div>
+            Studies have shown playing chess can improve?
+            <br>
+            <label class="radio-inline"><input type="radio" name="optradio" checked> Reading skills </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Memory </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Problem solving skills </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> All of the above</label>
+        </div>
+    </div>
+
+</body>
+
+</html>
