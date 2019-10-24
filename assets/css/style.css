@@ -1,0 +1,14 @@
+.startButton
+{
+    background-color:green;
+    margin:auto;
+    width:100px;
+    height:50px; 
+    align-content: flex-end
+
+}
+
+.chessTrivia
+{
+    background-color:gray;
+}

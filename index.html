@@ -16,9 +16,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+
+    <h1 class="container chessTrivia .text-center"> Chess Trivia </h1>
+    <!-- Let's create a space for our start button.  -->
+    <button class="start"> START </button> 
+    <div class="timeRemaining .text-center"> </div>
+    <div>Click the Start Button to Begin</div>
     <div class="container card-body border">
         <div>
             How many square are on a chess board?
@@ -31,12 +38,16 @@
     </div>
     <div class="container card-body border">
         <div>
-           Which combination describes how pawns move?
+            Which combination describes how pawns move?
             <br>
-            <label class="radio-inline"><input type="radio" name="optradio" checked> Initially, pawns can move one or two squares, and can capture opposing pieces diagonally </label>
-            <label class="radio-inline"><input type="radio" name="optradio"> Initially, pawns can only move one square, and can capture opposing pieces diagonally </label>
-            <label class="radio-inline"><input type="radio" name="optradio"> Initially, pawns must move two squares, and capture diagonally </label>
-            <label class="radio-inline"><input type="radio" name="optradio"> Initially, pawns can move one or two squares, and can capture vertically and horizontally </label>
+            <label class="radio-inline"><input type="radio" name="optradio" checked> Initially, pawns can move one or
+                two squares, and can capture opposing pieces diagonally </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Initially, pawns can only move one square,
+                and can capture opposing pieces diagonally </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Initially, pawns must move two squares, and
+                capture diagonally </label>
+            <label class="radio-inline"><input type="radio" name="optradio"> Initially, pawns can move one or two
+                squares, and can capture vertically and horizontally </label>
         </div>
     </div>
     <div class="container card-body border">
@@ -81,7 +92,8 @@
     </div>
     <div class="container card-body border">
         <div>
-            In chess half the square are light and half are dark. Which piece can never change from light to dark or dark to light?
+            In chess half the square are light and half are dark. Which piece can never change from light to dark or
+            dark to light?
             <br>
             <label class="radio-inline"><input type="radio" name="optradio" checked> Queen </label>
             <label class="radio-inline"><input type="radio" name="optradio"> Pawn </label>
@@ -100,6 +112,9 @@
         </div>
     </div>
 
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
-</html>
+</body >
+
+</html >
