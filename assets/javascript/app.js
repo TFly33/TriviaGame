@@ -152,12 +152,10 @@ $(".doneButton").click(function () {
 
 
 
-
-
 });
 
 // Bugs:
 // 1. Clicking buttons multiple times increases the value of the correct and incorrect submissions. I think this can be fixed by changing "change" to "submit" but I want to get everything else set up first. Any idea how to solve this?
     // Also, need to see how to set max values for those submissions so they can't go over 8 or below 0. 
-// 2. Clicking start multiple times resets the counter. 
+// 2. Clicking start multiple times resets the counter and messes everything up. Still buddy. 
 // 3. How do I get the text to start hidden until the button is clicked??
