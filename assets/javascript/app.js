@@ -1,10 +1,14 @@
+$(document).ready(function(){
+
+
+
 // First I'll create a function to countdown from 90 seconds. This will be the total amount of time the user has to guess on the answers. 
 function start() {
-    var timer = 90
+    var timer = 10
     var interval = setInterval(function () {
         timer--;
         // When the timer starts, the countdown gets added to the timeRemaining div. 
-        $(".timeRemaining").html(timer);
+        $(".timeRemaining").html("Time Remaining: " + timer);
         console.log(timer);
         if (timer === 0) {
             console.log("Time's Up");
@@ -16,6 +20,19 @@ function start() {
     }
         , 1000);
 }
+
+// Let's create a way to stop everything and submit the user's results. I'll apply this to situations where the timer hits zero, or when the user hit's the done button. 
+function timesUp() {
+    var unanswered = (8 - correct - incorrect);
+    // I want the text to be centered once the timesUp function hits. 
+    $(".results").html(" Correct Answers: " + correct), 
+    $(".results").append(" Incorrect Answers: " + incorrect);
+    $(".results").append(" Unanswered Questions: " + unanswered);
+    $(".startText").html("Thanks for playing! Before you know it, you'll be a chess master! Refresh the page to retry!");
+    $("#hidden").attr("class", "text-center");
+    $(".timeRemaining").html(" ");
+}
+
 // But we only want to run the Start function when a button is clicked. Otherwise, the countdown will immediately start when the page loads. 
 $(".start").click(function () {
     start();
@@ -27,7 +44,7 @@ $(".start").click(function () {
 // But first, I want to create a tally of the variable to be added to if the user gets the question correct. Then, I can run a function that listed the correct answers, and I will create something like Incorrect = (8 - correct), and finally, I'll create something like Unanswered = (8-correct - false).
 
 var correct = 0
-var incorrect = 0
+var incorrect = 0 
 
 $('#form1 input').on('change', function () {
     userInput1 = $('input[name=radioName1]:checked', '#form1').val();
@@ -129,20 +146,18 @@ $('#form8 input').on('change', function () {
     }
 });
 $(".doneButton").click(function () {
-    // This will list the unanswered. 
-var unanswered = (8 - correct - incorrect)
-console.log("Total correct Answers: " + correct);
-console.log("Total incorrect Answers: " + incorrect);
-console.log ("Total unanswered: " + unanswered);
-// Alright, now let's log the total number of correct answers. It will apply when the user hits the done button. 
+    timesUp();
+
 });
 
 
 
+
+
+});
+
 // Bugs:
-// 1. Clicking buttons multiple times increases the value of the correct and incorrect submissions. 
-// 
-
-
-
-
+// 1. Clicking buttons multiple times increases the value of the correct and incorrect submissions. I think this can be fixed by changing "change" to "submit" but I want to get everything else set up first. Any idea how to solve this?
+    // Also, need to see how to set max values for those submissions so they can't go over 8 or below 0. 
+// 2. Clicking start multiple times resets the counter. 
+// 3. How do I get the text to start hidden until the button is clicked??
