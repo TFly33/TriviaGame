@@ -25,41 +25,77 @@ $(".start").click(function () {
 
 // I need the radio form to capture the user's submission. I'm not sure I know the most efficient way to do it, so for now, I'm going to repeat the capture function for each form, with each form increasing in number. 
 
+// But first, I want to create a tally of the variable to be added to if the user gets the question correct. Then, I can run a function that listed the correct answers, and I will create something like Incorrect = (8 - correct)
+var correct = 0
+
 $('#form1 input').on('change', function () {
-    var userInput1 = $('input[name=radioName]:checked', '#form1').val();
+    userInput1 = $('input[name=radioName]:checked', '#form1').val();
     console.log("question #1=" + userInput1);
+    if (userInput1 === "true") {
+        correct++;
+        console.log(correct);
+    }
 });
 
 $('#form2 input').on('change', function () {
     var userInput2 = $('input[name=radioName]:checked', '#form2').val();
     console.log("question #2=" + userInput2);
+    if (userInput2 === "true") {
+        correct++;
+        console.log(correct);
+    }
 });
 
 $('#form3 input').on('change', function () {
     var userInput3 = $('input[name=radioName]:checked', '#form3').val();
     console.log("question #3=" + userInput3);
+    if (userInput3 === "true") {
+        correct++;
+        console.log(correct);
+    }
 });
 
 $('#form4 input').on('change', function () {
     var userInput4 = $('input[name=radioName]:checked', '#form4').val();
     console.log("question #4=" + userInput4);
+    if (userInput4 === "true") {
+        correct++;
+        console.log(correct);
+    }
 });
 $('#form5 input').on('change', function () {
     var userInput5 = $('input[name=radioName]:checked', '#form5').val();
     console.log("question #5=" + userInput5);
+    if (userInput5 === "true") {
+        correct++;
+        console.log(correct);
+    }
 });
 $('#form6 input').on('change', function () {
     var userInput6 = $('input[name=radioName]:checked', '#form6').val();
     console.log("question #6=" + userInput6);
+    if (userInput6 === "true") {
+        correct++;
+        console.log(correct);
+    }
 });
 $('#form7 input').on('change', function () {
     var userInput7 = $('input[name=radioName]:checked', '#form7').val();
     console.log("question #7=" + userInput7);
+    if (userInput7 === "true") {
+        correct++;
+        console.log(correct);
+    }
 });
 $('#form8 input').on('change', function () {
     var userInput8 = $('input[name=radioName]:checked', '#form8').val();
     console.log("question #8=" + userInput8);
+    if (userInput8 === "true") {
+        correct++;
+        console.log(correct);
+    }
 });
+
 
 // I need to create two arrays (I think). One array includes the correct answers, one includes the wrong answers. 
 
