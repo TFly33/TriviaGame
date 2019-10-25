@@ -21,6 +21,7 @@ body {
  .startText
  {
      width:100%;
+     margin-top:10px;
  }
 
  .start {
@@ -44,6 +45,9 @@ background-size: 60px 30px, 60px 30px, 60px 30px;
 height: 90px;
 margin: 15px auto;
 width: 750px;  
+ }
+ .doneButton{
+     margin-bottom:20px;
  }
 
 

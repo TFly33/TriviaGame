@@ -31,6 +31,7 @@ function timesUp() {
     $(".startText").html("Thanks for playing! Before you know it, you'll be a chess master! Refresh the page to retry!");
     $("#hidden").attr("class", "text-center");
     $(".timeRemaining").html(" ");
+    // $(".imagediv").html("<img src=/../'assets/images/chessimage.jpeg'")
 }
 
 // But we only want to run the Start function when a button is clicked. Otherwise, the countdown will immediately start when the page loads. 
@@ -159,3 +160,4 @@ $(".doneButton").click(function () {
     // Also, need to see how to set max values for those submissions so they can't go over 8 or below 0. 
 // 2. Clicking start multiple times resets the counter and messes everything up. Still buddy. 
 // 3. How do I get the text to start hidden until the button is clicked??
+// 4. Try to get line 34 to work. 
