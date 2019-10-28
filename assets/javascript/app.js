@@ -4,7 +4,7 @@ var gameOver = false;
 $("#hidden").hide();
 // First I'll create a function to countdown from 90 seconds. This will be the total amount of time the user has to guess on the answers. 
 function start() {
-    var timer = 30
+    var timer = 90
     var interval = setInterval(function () {
         timer--;
         // When the timer starts, the countdown gets added to the timeRemaining div. 
